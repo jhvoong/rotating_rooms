@@ -1,4 +1,4 @@
-#grid {
+#game {
   width: 50vw;
   height: 100vh;
   display: flex;
@@ -10,10 +10,14 @@
 .square {
   background: red;
   background-image: url("https://images.unsplash.com/photo-1515342724109-4653eccad95f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
-  transition: 0.1s all;
+  transition: 0.7s all;
 }
 
-.rotate-90  { transform: rotate(90deg)  }
-.rotate-180 { transform: rotate(180deg) }
-.rotate-270 { transform: rotate(270deg) }
-.rotate-360 { transform: rotate(360deg) }
+pre {
+  font-family: monospace
+}
+
+canvas {
+  display: flex;
+  margin: 0 auto;
+}
