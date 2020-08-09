@@ -5,7 +5,7 @@ let level = 3 // for future use, would multiply the number of squares on the scr
 let size = 1 / (level * 2) * 100
 let square
 let game = document.querySelector("#game")
-
+let possibleDegrees = [90, 180, 270]
 
 function init() {
   for (let i = 0; i < level; i++) {
@@ -15,7 +15,8 @@ function init() {
       square = new Maze(i, j).container
       Square.SQUARES[i][j] =  {
         square: square,
-        degrees: 0
+        degrees: 0,
+        correctDegrees: possibleDegrees[Math.floor(Math.random() * 3)]
       }
 
       // add to html
@@ -24,4 +25,8 @@ function init() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", init)
+document.getElementById("start").addEventListener("click", function(e) {
+  this.parentNode.innerText = ""
+  document.getElementById("game").style.display = "flex"
+  init()
+})

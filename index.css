@@ -7,6 +7,23 @@ body {
   background-image: url("parchment_scroll_background.jpg");
 }
 
+.initial-msg-container {
+  position: fixed;
+}
+#first-msg, #start, #win-msg {
+  font-size: 5vw;
+  text-align: center;
+  transition: 1s all;
+}
+#win-msg {
+  display: none;
+}
+#start {
+  cursor: pointer;
+}
+#start:hover {
+  color: green;
+}
 #game {
   width: 50vw;
   max-height: 100vh;
@@ -15,23 +32,33 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   overflow-y: hidden;
+  transition: 0.7s all
 }
-
+#game.hidden {
+  display: none !important;
+}
 .square {
-  background: red;
   background-image: url("https://images.unsplash.com/photo-1515342724109-4653eccad95f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
   transition: 0.7s all;
-  opacity: 0.6
+  opacity: 0.8
 }
 
 .square:hover {
-  opacity: 2
+  opacity: 1
 }
 
 .square.correct {
-  filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg) !important;
 }
-
+.square.incorrect.type0 {
+  filter: hue-rotate(-60deg);
+}
+.square.incorrect.type1 {
+  filter: hue-rotate(-90deg);
+}
+.square.incorrect.type2 {
+  filter: hue-rotate(-180deg);
+}
 pre {
   font-family: monospace
 }
