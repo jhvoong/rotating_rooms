@@ -22,7 +22,6 @@ class Square {
 
   rotate(target) {
     // rotate
-    console.log(target)
     const [coordX, coordY] = target.id.split("-")
     const info = Square.SQUARES[coordX][coordY]
     const nextDeg = info.degrees + 90

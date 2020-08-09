@@ -3,15 +3,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #64747a
+  background: #64747a;
+  background-image: url("parchment_scroll_background.jpg");
 }
 
 #game {
   width: 50vw;
+  max-height: 100vh;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 auto;
+  overflow-y: hidden;
 }
 
 .square {
